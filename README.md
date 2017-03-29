@@ -19,7 +19,7 @@ idol文章提交平台的接口文档（其实也没啥好写的）
   
 ### 键值定义：  
 | 字段        | 说明   |
-| --------   | ---------------  |
+| :--------   | :---------------  |
 | update   | 接口更新时间   |
 | id   | 文章ID   |
 | delivery   | 文章投送时间（时戳）   | 
@@ -69,12 +69,15 @@ idol文章提交平台的接口文档（其实也没啥好写的）
 &nbsp;&nbsp;&nbsp;&nbsp;就是`/data/`后跟id号  
   
 ### 字段定义：  
-&nbsp;&nbsp;&nbsp;&nbsp;title			文章题目  
-&nbsp;&nbsp;&nbsp;&nbsp;type			文章类型（ blog / news / magazine ）  
-&nbsp;&nbsp;&nbsp;&nbsp;source			文章来源（ 博客作者 / 新闻站点 / 杂志名称）  
-&nbsp;&nbsp;&nbsp;&nbsp;provider		提供者 （ 字幕组名字 ）  
-&nbsp;&nbsp;&nbsp;&nbsp;delivery		文章投送时间（可读的时间）  
-&nbsp;&nbsp;&nbsp;&nbsp;article			文章全文  
+
+| 字段        | 说明   |
+| :--------   | :---------------  |
+| title   | 文章题目   |
+| type   | 文章类型（ blog / news / magazine ）   |
+| source   | 文章来源（ 博客作者 / 新闻站点 / 杂志名称）   |
+| provider   | 提供者 （ 字幕组名字 ）   |
+| delivery   | 文章投送时间（可读的时间）   | 
+| detail   | 文章全文   |
   
 ### 返回实例：  
 ```
