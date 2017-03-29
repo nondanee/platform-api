@@ -11,11 +11,14 @@ idol文章提交平台的接口文档（其实也没啥好写的）
 &nbsp;&nbsp;&nbsp;&nbsp;https://platform.idolx46.top/data/...
 
 
-##  1.得到所有文章的列表数据  
+##  1.得到文章的列表数据  
 **因存的只是文件，每次产生列表要遍历目录并排序，该接口每小时更新一次，而且不分页**  
   
 ### 请求方法：  
-&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/getall`
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/getall`&nbsp;&nbsp;&nbsp;&nbsp;所有文章  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/getblog`&nbsp;&nbsp;&nbsp;&nbsp;博客文章  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/getnews`&nbsp;&nbsp;&nbsp;&nbsp;新闻文章  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/getmagazine`&nbsp;&nbsp;&nbsp;&nbsp;杂志文章  
   
 ### 键值定义：  
 | 字段        | 说明   |
