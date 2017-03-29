@@ -64,7 +64,7 @@ idol文章提交平台的接口文档（其实也没啥好写的）
 **nginx定义后的url，其实是静态文件分发**   
   
 ### 请求方法：  
-&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/\d{6}`  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/:id:`  
 &nbsp;&nbsp;&nbsp;&nbsp;就是上一接口中的detail字段  
 &nbsp;&nbsp;&nbsp;&nbsp;就是`/data/`后跟id号  
   
@@ -99,7 +99,7 @@ idol文章提交平台的接口文档（其实也没啥好写的）
 **图片名称用的是图片的MD5校验值，所以长**  
   
 ### 请求方法：  
-&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/\d{6}/\w{32}.(png|jpg|gif)`  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/:id:/:filename:`  
 &nbsp;&nbsp;&nbsp;&nbsp;也就是说由上一接口得到的文章全文中的图片路径前都要加上文章id  
 
 	![IMAGE](14afd06ecff7abf69102ae0743cab118.jpg)  
