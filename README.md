@@ -17,16 +17,18 @@ idol文章提交平台的接口文档（其实也没啥好写的）
 ### 请求方法：  
 &nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/getall`
   
-### 字段定义：  
-&nbsp;&nbsp;&nbsp;&nbsp;update			接口更新时间  
-&nbsp;&nbsp;&nbsp;&nbsp;id				文章ID  
-&nbsp;&nbsp;&nbsp;&nbsp;delivery		文章投送时间（时戳）  
-&nbsp;&nbsp;&nbsp;&nbsp;type			文章类型（ blog / news / magazine ）  
-&nbsp;&nbsp;&nbsp;&nbsp;title			文章题目  
-&nbsp;&nbsp;&nbsp;&nbsp;source			文章来源（ 博客作者 / 新闻站点 / 杂志名称）  
-&nbsp;&nbsp;&nbsp;&nbsp;provider		提供者 （ 字幕组名字 ）  
-&nbsp;&nbsp;&nbsp;&nbsp;summary			文章摘要 （ 不超过80字 ）  
-&nbsp;&nbsp;&nbsp;&nbsp;detail			文章详细  
+### 键值定义：  
+| 字段        | 说明   |
+| --------   | ---------------:  |
+| update   | 接口更新时间   |
+| id   | 文章ID   |
+| delivery   | 文章投送时间（时戳）   | 
+| type   | 文章类型（ blog / news / magazine ）   |
+| title   | 文章题目   |
+| source   | 文章来源（ 博客作者 / 新闻站点 / 杂志名称）   |
+| provider   | 提供者 （ 字幕组名字 ）   |
+| summary   | 文章摘要 （ 不超过80字 ）   |
+| detail   | 文章详细   |
   
 ### 返回实例：  
 ```
