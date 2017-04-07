@@ -26,7 +26,7 @@ idol文章提交平台的接口文档
 | :------   | :------------  |
 | type   | 分类（news / magazine / blog / 有效，不填则为所有分类）  |
 | page   | 页码（从1开始）   |
-| size   | 每页条数（默认每页10条）   |
+| size   | 每页条数（不填默认每页10条）   |
   
 ### 键值定义：  
 | 字段        | 说明   |
@@ -56,29 +56,29 @@ idol文章提交平台的接口文档
 		"detail": "/data/381269",
 		"view": "/preview/article/381269",
 		"withpic": null
-  },
-  {
-	"id": "573142",
-	"delivery": 1491564360,
-	"type": "blog",
-	"title": "就很可爱",
-	"subtitle": "Ray",
-	"provider": "日不懂语翻不会译的团长",
-	"summary": "阿靓「今天的Ray拍摄感觉如何」 阿头「很棒、我很少有机会跟麻衣羊两个人一起拍摄、这次就在旁边、感觉自己就像成了模特儿一样」 阿靓「真棒、那玲香呢」 阿香「Ra...",
-	"detail": "/data/573142",
-	"view": "/preview/article/573142",
-	"withpic": [
-		"https://platform.idolx46.top/photo/573142/9cfb20df84e4b13eeda338d072b34b33.jpg",
-		"https://platform.idolx46.top/photo/573142/ed85db1753a4ccd13652a14b92222b75.jpg",
-		"https://platform.idolx46.top/photo/573142/6f5ab3d3bc856dda16ea70c1d0fa1e21.jpg"
-	]
-  }
-  ......
+	},
+	{
+		"id": "573142",
+		"delivery": 1491564360,
+		"type": "blog",
+		"title": "就很可爱",
+		"subtitle": "Ray",
+		"provider": "日不懂语翻不会译的团长",
+		"summary": "阿靓「今天的Ray拍摄感觉如何」 阿头「很棒、我很少有机会跟麻衣羊两个人一起拍摄、这次就在旁边、感觉自己就像成了模特儿一样」 阿靓「真棒、那玲香呢」 阿香「Ra...",
+		"detail": "/data/573142",
+		"view": "/preview/article/573142",
+		"withpic": [
+			{"image": "https://platform.idolx46.top/photo/573142/9cfb20df84e4b13eeda338d072b34b33.jpg"},
+			{"image": "https://platform.idolx46.top/photo/573142/ed85db1753a4ccd13652a14b92222b75.jpg"},
+			{"image": "https://platform.idolx46.top/photo/573142/6f5ab3d3bc856dda16ea70c1d0fa1e21.jpg"}
+		]
+	},
+	......
 ]
 ```
 ### 出错：  
-&nbsp;&nbsp;&nbsp;&nbsp;分类不存在		400 no that type 
-&nbsp;&nbsp;&nbsp;&nbsp;该页是空		200 empty page
+&nbsp;&nbsp;&nbsp;&nbsp;分类不存在		400 no that type  
+&nbsp;&nbsp;&nbsp;&nbsp;该页是空		404 empty page  
 
 
 ##  2.得到指定文章的详细数据    
