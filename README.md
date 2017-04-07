@@ -101,13 +101,13 @@ idol文章提交平台的接口文档
 ### 返回实例：  
 ```
 {
-  "id": "573142",
-  "delivery": 1491564360,
-  "type": "blog",
-  "title": "就很可爱",
-  "subtitle": "Ray",
-  "provider": "日不懂语翻不会译的团长",
-  "article": "阿靓「今天的Ray拍摄感觉如何」<br><br>阿头「很棒、我很少有机会跟麻衣羊两个人一起拍摄、这次就在旁边、感觉自己就像成了模特儿一样」<br><br>阿靓「真棒、那玲香呢」<br><br>阿香「Ray的氛围很可爱、一进到现场、感觉自己就像成了女生一样」<br><br>3人「冷静点、你本来就是女生」<br><br>阿朱「我的话、这次和平常的妆容也不一样很兴奋、而且平常很少能在现场看见模特形态下的麻衣羊、刚才看见她摆姿势的样子、简直流弊到不行」<br><br>2人「很可爱呢」<br><br>阿靓「（摆手）」<br><br>阿朱「就很可爱」<br><br><img src=\"https://platform.idolx46.top/photo/573142/9cfb20df84e4b13eeda338d072b34b33.jpg\"><br><br><img src=\"https://platform.idolx46.top/photo/573142/ed85db1753a4ccd13652a14b92222b75.jpg\"><br><br><img src=\"https://platform.idolx46.top/photo/573142/6f5ab3d3bc856dda16ea70c1d0fa1e21.jpg\"><br><br><img src=\"https://platform.idolx46.top/photo/573142/dfcc3a65895e3e4d2b8a077002c66998.jpg\"><br><br><img src=\"https://platform.idolx46.top/photo/573142/c09c1daf9d8393db7a08443feafae21c.jpg\"><br><br><img src=\"https://platform.idolx46.top/photo/573142/058d044c41c2d352e3d6e4d9fd699e16.jpg\"><br><br><img src=\"https://platform.idolx46.top/photo/573142/b6d4d0f9b9a111dbcdba1379cf5a50c1.jpg\"><br><br><img src=\"https://platform.idolx46.top/photo/573142/543d28f4aac877b184af5639d3c37b6d.jpg\"><br><br><img src=\"https://platform.idolx46.top/photo/573142/cfb8fa53ec3527266917e143259d5615.jpg\"><br><br>"
+	"id": "646480",
+	"delivery": 1491577500,
+	"type": "news",
+	"title": "「Love music」",
+	"subtitle": "miwaスタッフtwitter",
+	"provider": "日不懂语翻不会译的团长",
+	"article": "miwaスタッフ【公式】@miwastaff	<br><br>今晚23時在富士台的「Love music」中、将会和播放乃木坂46的各位合唱「結-ゆい-」！<br><br><img src=\"https://platform.idolx46.top/photo/646480/587454e923f04c96ed61cf5bfba280d5.jpg\"><br>"
 }
 ```
   
