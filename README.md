@@ -122,7 +122,8 @@ idol文章提交平台的接口文档
 &nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/blogs`&nbsp;&nbsp;&nbsp;&nbsp;  
 
 ### 成员名称字典：   
-| 成员名     | 请求名    |
+| 成员名     | 请求参数    |
+| :--------   | :--------------  |
 | 若月佑美              | wakatsuki-yumi   |
 | 斎藤ちはる            | saitou-chiharu   |
 | 生田絵梨花            | ikuta-erika      |
@@ -164,7 +165,7 @@ idol文章提交平台的接口文档
 ### 请求参数：
 | 参数     | 说明   |
 | :------   | :------------  |
-| member   | 对照成员表 |
+| member   | 对照成员名称字典 |
 | page   | 页码（从1开始）   |
 | size   | 每页条数（不填默认每页10条）   |
   
