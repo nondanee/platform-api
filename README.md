@@ -113,3 +113,135 @@ idol文章提交平台的接口文档
   
 注：  
 &nbsp;&nbsp;&nbsp;&nbsp;全文都已转换成html格式，图片链接是绝对链接，无需处理  
+
+
+##  3.官博数据接口（时间倒序）  
+
+  
+### 请求方法：  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/blogs`&nbsp;&nbsp;&nbsp;&nbsp;  
+
+### 成员名称字典：   
+| 成员名     | 请求名    |
+| 若月佑美              | wakatsuki-yumi   |
+| 斎藤ちはる            | saitou-chiharu   |
+| 生田絵梨花            | ikuta-erika      |
+| 桜井玲香              | sakurai-reika    |
+| 伊藤万理華            | itou-marika      |
+| 衛藤美彩              | etou-misa        |
+| 高山一実              | takayama-kazumi  |
+| 斉藤優里              | saitou-yuuri     |
+| 白石麻衣              | shiraishi-mai    |
+| 西野七瀬              | nishino-nanase   |
+| 松村沙友理            | matsumura-sayuri |
+| 川後陽菜              | kawago-hina      |
+| 中田花奈              | nakada-kana      |
+| 星野みなみ            | hoshino-minami   |
+| 齋藤飛鳥              | saitou-asuka     |
+| 樋口日奈              | higuchi-hina     |
+| 中元日芽香            | nakamoto-himeka  |
+| 川村真洋              | kawamura-mahiro  |
+| 和田まあや            | wada-maaya       |
+| 能條愛未              | noujou-ami       |
+| 生駒里奈              | ikoma-rina       |
+| 井上小百合            | inoue-sayuri     |
+| 秋元真夏              | akimoto-manatsu  |
+| 堀未央奈              | hori-miona       |
+| 北野日奈子            | kitano-hinako    |
+| 新内眞衣              | shinuchi-mai     |
+| 伊藤かりん            | itou-karin       |
+| 相楽伊織              | sagara-iori      |
+| 伊藤純奈              | itou-junna       |
+| 渡辺みり愛            | watanabe-miria   |
+| 鈴木絢音              | suzuki-ayane     |
+| 佐々木琴子            | sasaki-kotoko    |
+| 山崎怜奈              | yamazaki-rena    |
+| 寺田蘭世              | terada-ranze     |
+| 研究生                | kenkyuusei       |
+| ３期生                | sankisei         |
+| スタッフブログ        | unei-sutaffu     |
+
+### 请求参数：
+| 参数     | 说明   |
+| :------   | :------------  |
+| member   | 对照成员表 |
+| page   | 页码（从1开始）   |
+| size   | 每页条数（不填默认每页10条）   |
+  
+### 键值定义：  
+| 字段        | 说明   |
+| :--------   | :-----------------  |
+| post   | 发布时间（时戳）   | 
+| author   | 成员名   |
+| title   | 博客标题   |
+| summary   | 博客摘要 （ 官博移动版数据 ）   |
+| url   | 官博连接   |
+  
+### 返回实例：  
+```
+[
+	{
+		"post": 1492429680,
+		"author": "伊藤純奈",
+		"title": "犬夜叉、おわり。",
+		"summary": " \n \n \n \n \nこんばんは！\n伊藤純奈です\n \n \n\n \n\n \n \nオフショット〜〜\n \n ...",
+		"url": "http://blog.nogizaka46.com/junna.itou/smph/2017/04/038155.php"
+	},
+	{
+		"post": 1492417200,
+		"author": "若月佑美",
+		"title": "あれ？若また稽古してるの？",
+		"summary": "というメンバーからの言葉に\nちょっと笑ってしまった。光栄な事です。\n \n\n \n舞台 犬夜叉 千穐...",
+		"url": "http://blog.nogizaka46.com/yumi.wakatsuki/smph/2017/04/038148.php"
+	},
+	{
+		"post": 1492410240,
+		"author": "中元日芽香",
+		"title": "ひめたん-0o0-その698",
+		"summary": " \n\n \n日曜の夜は、らじらー！サンデー\n \nゲストは寺田蘭世ちゃんでした( ˆωˆ )\n聞いて...",
+		"url": "http://blog.nogizaka46.com/himeka.nakamoto/smph/2017/04/038131.php"
+	},
+	{
+		"post": 1492408500,
+		"author": "白石麻衣",
+		"title": "ポカポカ。",
+		"summary": "こんにちは&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お久しぶりです...",
+		"url": "http://blog.nogizaka46.com/mai.shiraishi/smph/2017/04/038130.php"
+	},
+	......
+	{
+		"post": 1492344720,
+		"author": "川村真洋",
+		"title": "はろ♡",
+		"summary": "&nbsp;こんにちは♡ろってぃーです．&nbsp;&nbsp;&nbsp;今日は暖かかったです...",
+		"url": "http://blog.nogizaka46.com/mahiro.kawamura/smph/2017/04/038125.php"
+	}
+]
+```
+### 出错：  
+&nbsp;&nbsp;&nbsp;&nbsp;成员不存在		400 no such member  
+&nbsp;&nbsp;&nbsp;&nbsp;该页是空		404 empty page    
+   
+##  4.APP更新接口    
+  
+### 请求方法：  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/check/version/android`  
+
+### 字段定义：  
+
+| 字段        | 说明   |
+| :--------   | :---------------  |
+| versionCode   | 版本编码  |
+| versionName   | 版本号   | 
+| msg   | 更新描述   |
+| download   | 下载地址   |
+  
+### 返回实例：  
+```
+{
+	"versionCode": 2,
+	"versionName": "1.0",
+	"msg": "fixed some bugs",
+	"download": "https://platform.idolx46.top/resource/app-debug.apk"
+}
+```
