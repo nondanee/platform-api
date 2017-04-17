@@ -12,7 +12,7 @@ idol文章提交平台的接口文档
 &nbsp;&nbsp;&nbsp;&nbsp;http://platform.idolx46.top:4600/data/...
 
 
-##  1.得到文章的列表数据（时间倒序）  
+##  1.文章列表接口（时间倒序）  
 
   
 ### 请求方法：  
@@ -81,7 +81,7 @@ idol文章提交平台的接口文档
 &nbsp;&nbsp;&nbsp;&nbsp;该页是空		404 empty page  
 
 
-##  2.得到指定文章的详细数据    
+##  2.详细数据接口    
   
 ### 请求方法：  
 &nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/:id:`  
@@ -176,7 +176,7 @@ idol文章提交平台的接口文档
 | author   | 成员名   |
 | title   | 博客标题   |
 | summary   | 博客摘要 （ 官博移动版数据 ）   |
-| url   | 官博连接   |
+| url   | 官博链接   |
   
 ### 返回实例：  
 ```
