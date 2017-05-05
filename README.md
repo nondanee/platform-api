@@ -1,11 +1,9 @@
 # 乃木物APP后台接口文档  
-~~idol文章提交平台的接口文档~~
 APIs' documentation for nogimono app  
   
 接口说明：  
-&nbsp;&nbsp;&nbsp;&nbsp;平台全站依然使用HTTPS  
-&nbsp;&nbsp;&nbsp;&nbsp;另外开了4600端口给接口使用，使用HTTP  
-&nbsp;&nbsp;&nbsp;&nbsp;提交的数据已经全部入库  
+&nbsp;&nbsp;&nbsp;&nbsp;平台全站使用HTTPS  
+&nbsp;&nbsp;&nbsp;&nbsp;另开外4600端口给数据接口使用，使用HTTP  
   
 接口地址：  
 &nbsp;&nbsp;&nbsp;&nbsp;https://platform.idolx46.top/data/...  
@@ -269,6 +267,7 @@ APIs' documentation for nogimono app
 		"rome": "unei-sutaffu",
 		"portrait": "https://platform.idolx46.top/resource/sutaffu_prof.jpg"
 	}
+]
 ```
 
 ### 返回实例(详细)：
@@ -300,7 +299,7 @@ APIs' documentation for nogimono app
 		"link": "http://www.nogizaka46.com/smph/member/detail/wadamaaya.php"
 	}
 ]
-
+```
 
 ##  5.成员介绍接口  
 
@@ -328,7 +327,7 @@ APIs' documentation for nogimono app
 | link   | 官网连接   |
   
 ### 返回实例：  
-```
+```  
 {
 	"name": "秋元真夏",
 	"kana": "あきもと まなつ",
@@ -341,7 +340,7 @@ APIs' documentation for nogimono app
 	"portrait": "http://img.nogizaka46.com/www/smph/member/img/akimotomanatsu_prof.jpg",
 	"link": "http://www.nogizaka46.com/smph/member/detail/akimotomanatsu.php"
 }
-```
+```  
 
 ### 出错：  
 &nbsp;&nbsp;&nbsp;&nbsp;成员不存在		400 no such member 
