@@ -1,11 +1,11 @@
-# APIs' documentation for "platform.idolx46.top"  
-idol文章提交平台的接口文档  
+# 乃木物APP后台接口文档  
+~~idol文章提交平台的接口文档~~
+APIs' documentation for nogimono app  
   
-平台说明：  
+接口说明：  
 &nbsp;&nbsp;&nbsp;&nbsp;平台全站依然使用HTTPS  
-&nbsp;&nbsp;&nbsp;&nbsp;另外开了4600端口给接口使用（仅JSON数据接口），使用HTTP  
+&nbsp;&nbsp;&nbsp;&nbsp;另外开了4600端口给接口使用，使用HTTP  
 &nbsp;&nbsp;&nbsp;&nbsp;提交的数据已经全部入库  
-&nbsp;&nbsp;&nbsp;&nbsp;所有接口其实都是静态接口  
   
 接口地址：  
 &nbsp;&nbsp;&nbsp;&nbsp;https://platform.idolx46.top/data/...  
@@ -24,9 +24,9 @@ idol文章提交平台的接口文档
 ### 请求参数：
 | 参数     | 说明   |
 | :------   | :------------  |
-| type   | 分类（news / magazine / blog 有效，不填则为所有分类）  |
+| type   | 分类（news / magazine / blog 有效，没有该参数默认所有分类）  |
 | page   | 页码（从1开始）   |
-| size   | 每页条数（不填默认每页10条）   |
+| size   | 每页条数（没有该参数默认每页10条）   |
   
 ### 键值定义：  
 | 字段        | 说明   |
@@ -39,7 +39,7 @@ idol文章提交平台的接口文档
 | provider   | 提供者 （ 字幕组名字 ）   |
 | summary   | 文章摘要 （ 不超过80字 ）   |
 | detail   | 文章详细   |
-| view   | 文章预览（等别人做适配）   |
+| view   | 文章预览（移动端页面）   |
 | withpic   | 文章附图（没有配图为null，3张以下显示1张，3张及以上显示3张）   |
   
 ### 返回实例：  
@@ -54,7 +54,7 @@ idol文章提交平台的接口文档
 		"provider": "尚基（PosiPeace字幕组）×花舞（泪痣小八字幕组）",
 		"summary": "小実和花奈琳搭档，初次与三期生的中学生成员们进行对谈。一开始二人就在21世纪出生的新人面前毫不掩饰自己的震惊。对着这两个天真烂漫的人才，天生就喜欢偶像的二人也变...",
 		"detail": "/data/381269",
-		"view": "/preview/article/381269",
+		"view": "/mbview/article/381269",
 		"withpic": null
 	},
 	{
@@ -66,7 +66,7 @@ idol文章提交平台的接口文档
 		"provider": "日不懂语翻不会译的团长",
 		"summary": "阿靓「今天的Ray拍摄感觉如何」 阿头「很棒、我很少有机会跟麻衣羊两个人一起拍摄、这次就在旁边、感觉自己就像成了模特儿一样」 阿靓「真棒、那玲香呢」 阿香「Ra...",
 		"detail": "/data/573142",
-		"view": "/preview/article/573142",
+		"view": "/mbview/article/573142",
 		"withpic": [
 			{"image": "https://platform.idolx46.top/photo/573142/9cfb20df84e4b13eeda338d072b34b33.jpg"},
 			{"image": "https://platform.idolx46.top/photo/573142/ed85db1753a4ccd13652a14b92222b75.jpg"},
@@ -96,7 +96,7 @@ idol文章提交平台的接口文档
 | title   | 文章题目   |
 | subtitle   | 文章副标题（ 成员名 / 新闻站点 / 杂志名 ）   |
 | provider   | 提供者 （ 字幕组名字 ）   |
-| article   | 文章全文   |
+| article   | 文章全文（html格式）   |
   
 ### 返回实例：  
 ```
@@ -110,9 +110,6 @@ idol文章提交平台的接口文档
 	"article": "miwaスタッフ【公式】@miwastaff	<br><br>今晚23時在富士台的「Love music」中、将会和播放乃木坂46的各位合唱「結-ゆい-」！<br><br><img src=\"https://platform.idolx46.top/photo/646480/587454e923f04c96ed61cf5bfba280d5.jpg\"><br>"
 }
 ```
-  
-注：  
-&nbsp;&nbsp;&nbsp;&nbsp;全文都已转换成html格式，图片链接是绝对链接，无需处理  
 
 
 ##  3.官博数据接口（时间倒序）  
@@ -124,50 +121,61 @@ idol文章提交平台的接口文档
 ### 成员名称字典：   
 | 成员名     | 请求参数    |
 | :--------   | :--------------  |
-| 若月佑美              | wakatsuki-yumi   |
-| 斎藤ちはる            | saitou-chiharu   |
-| 生田絵梨花            | ikuta-erika      |
-| 桜井玲香              | sakurai-reika    |
-| 伊藤万理華            | itou-marika      |
-| 衛藤美彩              | etou-misa        |
-| 高山一実              | takayama-kazumi  |
-| 斉藤優里              | saitou-yuuri     |
-| 白石麻衣              | shiraishi-mai    |
-| 西野七瀬              | nishino-nanase   |
-| 松村沙友理            | matsumura-sayuri |
-| 川後陽菜              | kawago-hina      |
-| 中田花奈              | nakada-kana      |
-| 星野みなみ            | hoshino-minami   |
-| 齋藤飛鳥              | saitou-asuka     |
-| 樋口日奈              | higuchi-hina     |
-| 中元日芽香            | nakamoto-himeka  |
-| 川村真洋              | kawamura-mahiro  |
-| 和田まあや            | wada-maaya       |
-| 能條愛未              | noujou-ami       |
-| 生駒里奈              | ikoma-rina       |
-| 井上小百合            | inoue-sayuri     |
-| 秋元真夏              | akimoto-manatsu  |
-| 堀未央奈              | hori-miona       |
-| 北野日奈子            | kitano-hinako    |
-| 新内眞衣              | shinuchi-mai     |
-| 伊藤かりん            | itou-karin       |
-| 相楽伊織              | sagara-iori      |
-| 伊藤純奈              | itou-junna       |
-| 渡辺みり愛            | watanabe-miria   |
-| 鈴木絢音              | suzuki-ayane     |
-| 佐々木琴子            | sasaki-kotoko    |
-| 山崎怜奈              | yamazaki-rena    |
-| 寺田蘭世              | terada-ranze     |
-| 研究生                | kenkyuusei       |
-| ３期生                | sankisei         |
-| スタッフブログ        | unei-sutaffu     |
+| 秋元真夏                       | akimoto-manatsu        |
+| 生田絵梨花                     | ikuta-erika            |
+| 生駒里奈                       | ikoma-rina             |
+| 伊藤かりん                     | itou-karin             |
+| 伊藤純奈                       | itou-junna             |
+| 伊藤万理華                     | itou-marika            |
+| 伊藤理々杏                     | itou-riria             |
+| 井上小百合                     | inoue-sayuri           |
+| 岩本蓮加                       | iwamoto-renka          |
+| 梅澤美波                       | umezawa-minami         |
+| 衛藤美彩                       | etou-misa              |
+| 大園桃子                       | oozono-momoko          |
+| 川後陽菜                       | kawago-hina            |
+| 川村真洋                       | kawamura-mahiro        |
+| 北野日奈子                     | kitano-hinako          |
+| 久保史緒里                     | kubo-shiori            |
+| 齋藤飛鳥                       | saitou-asuka           |
+| 斎藤ちはる                     | saitou-chiharu         |
+| 斉藤優里                       | saitou-yuuri           |
+| 阪口珠美                       | sakaguchi-tamami       |
+| 相楽伊織                       | sagara-iori            |
+| 桜井玲香                       | sakurai-reika          |
+| 佐々木琴子                     | sasaki-kotoko          |
+| 佐藤楓                         | satou-kaede            |
+| 白石麻衣                       | shiraishi-mai          |
+| 新内眞衣                       | shinuchi-mai           |
+| 鈴木絢音                       | suzuki-ayane           |
+| 高山一実                       | takayama-kazumi        |
+| 寺田蘭世                       | terada-ranze           |
+| 中田花奈                       | nakada-kana            |
+| 中村麗乃                       | nakamura-reno          |
+| 中元日芽香                     | nakamoto-himeka        |
+| 西野七瀬                       | nishino-nanase         |
+| 能條愛未                       | noujou-ami             |
+| 樋口日奈                       | higuchi-hina           |
+| 星野みなみ                     | hoshino-minami         |
+| 堀未央奈                       | hori-miona             |
+| 松村沙友理                     | matsumura-sayuri       |
+| 向井葉月                       | mukai-hazuki           |
+| 山崎怜奈                       | yamazaki-rena          |
+| 山下美月                       | yamashita-mizuki       |
+| 吉田綾乃クリスティー           | yoshida-ayano-christie |
+| 与田祐希                       | yoda-yuuki             |
+| 若月佑美                       | wakatsuki-yumi         |
+| 和田まあや                     | wada-maaya             |
+| 渡辺みり愛                     | watanabe-miria         |
+| 研究生                         | kenkyuusei             |
+| スタッフブログ                 | unei-sutaffu           |
 
 ### 请求参数：
 | 参数     | 说明   |
 | :------   | :------------  |
-| member   | 对照成员名称字典（不填为所有成员） |
+| member   | 对照成员名称字典，该列表可从接口获得(没有该参数默认成员) |
 | page   | 页码（从1开始）   |
-| size   | 每页条数（不填默认每页10条）   |
+| size   | 每页条数（没有该参数默认每页10条）   |
   
 ### 键值定义：  
 | 字段        | 说明   |
@@ -222,8 +230,124 @@ idol文章提交平台的接口文档
 ### 出错：  
 &nbsp;&nbsp;&nbsp;&nbsp;成员不存在		400 no such member  
 &nbsp;&nbsp;&nbsp;&nbsp;该页是空		404 empty page    
+
+
+
+
+##  4.成员列表接口   
+  
+### 请求方法：  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/memberlist`(简版，含"研究生"、"スタッフブログ"项)  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/members` / `/data/intro?member=all`(详细，不含"研究生"、"スタッフブログ"项)  
+
+### 字段定义：  
+
+| 字段        | 说明   |
+| :--------   | :---------------  |
+| name   | 姓名   |
+| kana   | 姓名-平假名   | 
+| rome   | 姓名-罗马音(接口3/5的请求参数)   |
+| birthdate   | 出生日期   |
+| bloodtype   | 血型   |
+| constellation   | 星座   |
+| height   | 身高   |
+| status   | 选拔情况   |
+| portrait   | 公式照   |
+| link   | 官网连接   |
+  
+### 返回实例(简版)：  
+```
+[
+	{
+		"name": "秋元真夏",
+		"rome": "akimoto-manatsu",
+		"portrait": "http://img.nogizaka46.com/www/smph/member/img/akimotomanatsu_prof.jpg"
+	},
+	...
+	{
+		"name": "スタッフブログ",
+		"rome": "unei-sutaffu",
+		"portrait": "https://platform.idolx46.top/resource/sutaffu_prof.jpg"
+	}
+```
+
+### 返回实例(详细)：
+```
+[
+	{
+		"name": "秋元真夏",
+		"kana": "あきもと まなつ",
+		"rome": "akimoto-manatsu",
+		"birthdate": "1993年8月20日",
+		"bloodtype": "B型",
+		"constellation": "しし座",
+		"height": "156cm",
+		"status": "1期生 選抜メンバー 十二福神",
+		"portrait": "http://img.nogizaka46.com/www/smph/member/img/akimotomanatsu_prof.jpg",
+		"link": "http://www.nogizaka46.com/smph/member/detail/akimotomanatsu.php"
+	},
+	...
+	{
+		"name": "和田まあや",
+		"kana": "わだ まあや",
+		"rome": "wada-maaya",
+		"birthdate": "1998年4月23日",
+		"bloodtype": "O型",
+		"constellation": "おうし座",
+		"height": "157cm",
+		"status": "1期生 アンダー",
+		"portrait": "http://img.nogizaka46.com/www/smph/member/img/wadamaaya_prof.jpg",
+		"link": "http://www.nogizaka46.com/smph/member/detail/wadamaaya.php"
+	}
+]
+
+
+##  5.成员介绍接口  
+
+### 请求方法：  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/intro`  
+
+### 请求参数：
+| 参数     | 说明   |
+| :------   | :------------  |
+| member   | 对照成员名称字典，该列表可从接口获得 |
+
+### 字段定义：  
+
+| 字段        | 说明   |
+| :--------   | :---------------  |
+| name   | 姓名   |
+| kana   | 姓名-平假名   | 
+| rome   | 姓名-罗马音   |
+| birthdate   | 出生日期   |
+| bloodtype   | 血型   |
+| constellation   | 星座   |
+| height   | 身高   |
+| status   | 选拔情况   |
+| portrait   | 公式照   |
+| link   | 官网连接   |
+  
+### 返回实例：  
+```
+{
+	"name": "秋元真夏",
+	"kana": "あきもと まなつ",
+	"rome": "akimoto-manatsu",
+	"birthdate": "1993年8月20日",
+	"bloodtype": "B型",
+	"constellation": "しし座",
+	"height": "156cm",
+	"status": "1期生 選抜メンバー 十二福神",
+	"portrait": "http://img.nogizaka46.com/www/smph/member/img/akimotomanatsu_prof.jpg",
+	"link": "http://www.nogizaka46.com/smph/member/detail/akimotomanatsu.php"
+}
+```
+
+### 出错：  
+&nbsp;&nbsp;&nbsp;&nbsp;成员不存在		400 no such member 
+&nbsp;&nbsp;&nbsp;&nbsp;缺少参数		400 required parameter miss  
    
-##  4.APP更新接口    
+##  6.APP更新接口    
   
 ### 请求方法：  
 &nbsp;&nbsp;&nbsp;&nbsp;GET	`/check/version/android`  
