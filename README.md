@@ -343,7 +343,7 @@
 
 ### 出错：  
 &nbsp;&nbsp;&nbsp;&nbsp;成员不存在		400 no such member  
-&nbsp;&nbsp;&nbsp;&nbsp;缺少参数		400 required parameter miss   
+&nbsp;&nbsp;&nbsp;&nbsp;缺少参数		400 required parameter missing   
    
 ##  6.APP更新接口    
   
