@@ -1,6 +1,5 @@
 # 乃木物APP后台接口文档  
-APIs' documentation for nogimono app  
-  
+    
 接口说明：  
 &nbsp;&nbsp;&nbsp;&nbsp;平台全站使用HTTPS  
 &nbsp;&nbsp;&nbsp;&nbsp;另开外4600端口给数据接口使用，使用HTTP  
@@ -235,8 +234,8 @@ APIs' documentation for nogimono app
 ##  4.成员列表接口   
   
 ### 请求方法：  
-&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/memberlist`(简版，含"研究生"、"スタッフブログ"项)  
-&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/members` / `/data/intro?member=all`(详细，不含"研究生"、"スタッフブログ"项)  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/memberlist`&nbsp;&nbsp;&nbsp;&nbsp;(简版，含"研究生"、"スタッフブログ"项)  
+&nbsp;&nbsp;&nbsp;&nbsp;GET	`/data/members`&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;`/data/intro?member=all`&nbsp;&nbsp;&nbsp;&nbsp;(详细，不含"研究生"、"スタッフブログ"项)  
 
 ### 字段定义：  
 
@@ -244,7 +243,7 @@ APIs' documentation for nogimono app
 | :--------   | :---------------  |
 | name   | 姓名   |
 | kana   | 姓名-平假名   | 
-| rome   | 姓名-罗马音(接口3/5的请求参数)   |
+| rome   | 姓名-罗马音(接口3,接口5的member参数请求值)   |
 | birthdate   | 出生日期   |
 | bloodtype   | 血型   |
 | constellation   | 星座   |
@@ -343,8 +342,8 @@ APIs' documentation for nogimono app
 ```  
 
 ### 出错：  
-&nbsp;&nbsp;&nbsp;&nbsp;成员不存在		400 no such member 
-&nbsp;&nbsp;&nbsp;&nbsp;缺少参数		400 required parameter miss  
+&nbsp;&nbsp;&nbsp;&nbsp;成员不存在		400 no such member  
+&nbsp;&nbsp;&nbsp;&nbsp;缺少参数		400 required parameter miss   
    
 ##  6.APP更新接口    
   
